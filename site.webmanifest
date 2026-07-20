@@ -1,0 +1,9 @@
+{
+  "name": "Андрей Батурин — персональный тренер",
+  "short_name": "Andrago Turbo",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": []
+}
