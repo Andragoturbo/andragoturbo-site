@@ -780,4 +780,33 @@ body{
     font-size:16px;
   }
 }
+/* ===== SECTION TITLES — GOLD ACCENT ===== */
 
+.section-header h2,
+.contacts h2{
+  position:relative;
+  padding-bottom:24px;
+}
+
+.section-header h2::after,
+.contacts h2::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:0;
+  width:76px;
+  height:2px;
+  transform:translateX(-50%);
+  border-radius:999px;
+  background:linear-gradient(
+    90deg,
+    transparent,
+    var(--gold),
+    transparent
+  );
+  box-shadow:0 0 18px rgba(201,164,92,.28);
+}
+
+.section-header p{
+  margin-top:22px;
+}
