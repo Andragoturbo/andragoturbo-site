@@ -700,3 +700,83 @@ body{
     margin-top:27px;
   }
 }
+/* ===== ACHIEVEMENTS — PREMIUM GRID ===== */
+
+.achievement-list{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:20px;
+}
+
+.achievement-list li{
+  position:relative;
+  height:100%;
+  margin:0;
+  padding:26px 24px;
+  align-content:start;
+  overflow:hidden;
+  transition:
+    transform .25s ease,
+    border-color .25s ease,
+    background .25s ease;
+}
+
+.achievement-list li::after{
+  content:"";
+  position:absolute;
+  width:130px;
+  height:130px;
+  right:-65px;
+  bottom:-75px;
+  border-radius:50%;
+  background:radial-gradient(
+    circle,
+    rgba(201,164,92,.11),
+    transparent 68%
+  );
+  pointer-events:none;
+}
+
+.achievement-list li:hover{
+  transform:translateY(-3px);
+  border-color:rgba(201,164,92,.34);
+  background:var(--surface-light);
+}
+
+.achievement-number{
+  margin-top:2px;
+  flex-shrink:0;
+}
+
+.achievement-list h3{
+  color:var(--gold-light);
+  font-size:15px;
+  letter-spacing:.03em;
+  text-transform:uppercase;
+}
+
+.achievement-list strong{
+  margin-bottom:7px;
+  font-size:17px;
+}
+
+.achievement-list p{
+  font-size:14px;
+  line-height:1.55;
+}
+
+@media(max-width:760px){
+  .achievement-list{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+
+  .achievement-list li{
+    margin:0;
+    padding:21px 18px;
+  }
+
+  .achievement-list strong{
+    font-size:16px;
+  }
+}
