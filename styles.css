@@ -810,3 +810,48 @@ body{
 .section-header p{
   margin-top:22px;
 }
+/* ===== IMAGES — PREMIUM HOVER ===== */
+
+.about-image,
+.format-image{
+  position:relative;
+  isolation:isolate;
+  border:1px solid rgba(201,164,92,.14);
+  box-shadow:0 20px 48px rgba(0,0,0,.28);
+}
+
+.about-image::after,
+.format-image::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:2;
+  pointer-events:none;
+  border-radius:inherit;
+  background:linear-gradient(
+    180deg,
+    transparent 55%,
+    rgba(201,164,92,.07) 100%
+  );
+  box-shadow:inset 0 0 35px rgba(0,0,0,.12);
+}
+
+.about-image img,
+.format-image img{
+  transition:
+    transform .65s cubic-bezier(.2,.7,.2,1),
+    filter .4s ease;
+}
+
+.about-image:hover img,
+.format-row:hover .format-image img{
+  transform:scale(1.035);
+  filter:contrast(1.04) saturate(1.06);
+}
+
+@media(prefers-reduced-motion:reduce){
+  .about-image img,
+  .format-image img{
+    transition:none;
+  }
+}
