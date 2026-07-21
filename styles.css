@@ -563,54 +563,57 @@ body{
   box-shadow:0 10px 25px rgba(201,164,92,.18);
 }
 
-@media(max-width:680px){
-  .contacts{
-    padding-top:88px;
-    padding-bottom:88px;
-  }
+/* ===== HERO — OPEN PREMIUM LAYOUT ===== */
 
-  .contacts-inner{
-    padding:42px 20px;
-    border-radius:20px;
-  }
-
-  .contacts h2{
-    font-size:34px;
-  }
-
-  .contact-phone{
-    font-size:17px;
-    padding:12px 18px;
-  }
+.hero{
+  place-items:end center;
 }
-/* ===== HERO — PREMIUM BRANDING ===== */
+
+.hero-overlay{
+  background:linear-gradient(
+    180deg,
+    rgba(0,0,0,.12) 0%,
+    rgba(0,0,0,.18) 32%,
+    rgba(0,0,0,.58) 67%,
+    rgba(7,7,9,.94) 100%
+  );
+}
 
 .hero-content{
   position:relative;
-  max-width:980px;
-  padding:86px 54px 84px;
-  border:1px solid rgba(201,164,92,.20);
-  border-radius:30px;
-  background:linear-gradient(
-    145deg,
-    rgba(10,10,12,.42),
-    rgba(10,10,12,.16)
-  );
-  box-shadow:
-    0 30px 90px rgba(0,0,0,.35),
-    inset 0 1px 0 rgba(255,255,255,.04);
-  backdrop-filter:blur(3px);
+  z-index:2;
+  width:min(100% - 40px,1080px);
+  max-width:none;
+  margin:0 auto 48px;
+  padding:0 20px 54px;
+  transform:none;
+  border:0;
+  border-radius:0;
+  background:none;
+  box-shadow:none;
+  backdrop-filter:none;
 }
 
 .hero-content::before{
+  content:none;
+}
+
+.hero-kicker{
+  margin:0 0 24px;
+  color:var(--gold-light);
+  font-size:14px;
+  line-height:1.2;
+  font-weight:600;
+  letter-spacing:.26em;
+  text-shadow:0 3px 18px rgba(0,0,0,.75);
+}
+
+.hero-kicker::before{
   content:"";
-  position:absolute;
-  width:130px;
-  height:3px;
-  left:50%;
-  top:34px;
-  transform:translateX(-50%);
-  border-radius:999px;
+  display:block;
+  width:92px;
+  height:2px;
+  margin:0 auto 20px;
   background:linear-gradient(
     90deg,
     transparent,
@@ -619,61 +622,82 @@ body{
   );
 }
 
-.hero-kicker{
-  color:var(--gold-light);
-  text-shadow:0 2px 16px rgba(0,0,0,.45);
-}
-
 .hero h1{
-  text-shadow:0 6px 28px rgba(0,0,0,.55);
+  max-width:900px;
+  font-size:clamp(56px,5.3vw,78px);
+  line-height:1;
+  font-weight:600;
+  letter-spacing:-.035em;
+  white-space:normal;
+  text-shadow:0 7px 30px rgba(0,0,0,.75);
 }
 
 .hero-text{
-  color:#e2ddd5;
-  text-shadow:0 3px 18px rgba(0,0,0,.55);
+  max-width:720px;
+  margin-top:25px;
+  color:#e6e0d7;
+  font-size:18px;
+  line-height:1.6;
+  text-shadow:0 3px 16px rgba(0,0,0,.8);
 }
 
 .hero-button{
-  position:relative;
-  overflow:hidden;
-  min-width:250px;
-  border:1px solid rgba(255,255,255,.12);
-  box-shadow:
-    0 14px 34px rgba(201,164,92,.24),
-    inset 0 1px 0 rgba(255,255,255,.28);
-}
-
-.hero-button::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  transform:translateX(-120%);
+  min-width:280px;
+  min-height:60px;
+  margin-top:32px;
+  padding:0 34px;
+  border:1px solid rgba(255,255,255,.18);
   background:linear-gradient(
-    110deg,
-    transparent 25%,
-    rgba(255,255,255,.28) 50%,
-    transparent 75%
+    135deg,
+    var(--gold-light),
+    var(--gold)
   );
-  transition:transform .55s ease;
+  color:#111;
+  font-size:15px;
+  font-weight:600;
+  box-shadow:
+    0 16px 38px rgba(201,164,92,.3),
+    inset 0 1px 0 rgba(255,255,255,.35);
 }
 
-.hero-button:hover::after{
-  transform:translateX(120%);
+.hero-button:hover{
+  background:var(--gold-light);
+  transform:translateY(-3px);
 }
 
 @media(max-width:680px){
   .hero-content{
     width:min(100% - 24px,520px);
-    padding:70px 22px 66px;
-    border-radius:22px;
-  }
-
-  .hero-content::before{
-    top:26px;
-    width:90px;
+    margin-bottom:28px;
+    padding:0 10px 54px;
   }
 
   .hero-kicker{
-    margin-bottom:26px;
+    margin-bottom:20px;
+    font-size:11px;
+    letter-spacing:.18em;
+  }
+
+  .hero-kicker::before{
+    width:72px;
+    margin-bottom:16px;
+  }
+
+  .hero h1{
+    font-size:clamp(42px,12vw,54px);
+    line-height:1.04;
+  }
+
+  .hero-text{
+    margin-top:20px;
+    font-size:15px;
+    line-height:1.55;
+  }
+
+  .hero-button{
+    width:min(100%,310px);
+    min-width:0;
+    min-height:57px;
+    margin-top:27px;
   }
 }
