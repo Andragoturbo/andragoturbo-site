@@ -461,3 +461,125 @@ body{
     padding:10px 8px 18px;
   }
 }
+/* ===== CONTACTS — PREMIUM CTA ===== */
+
+.contacts{
+  position:relative;
+  overflow:hidden;
+  padding-top:130px;
+  padding-bottom:130px;
+}
+
+.contacts::before{
+  content:"";
+  position:absolute;
+  width:520px;
+  height:520px;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  border-radius:50%;
+  background:radial-gradient(
+    circle,
+    rgba(201,164,92,.12) 0%,
+    rgba(201,164,92,.04) 42%,
+    transparent 72%
+  );
+  pointer-events:none;
+}
+
+.contacts-inner{
+  position:relative;
+  z-index:1;
+  padding:58px 46px;
+  background:linear-gradient(
+    145deg,
+    rgba(255,255,255,.045),
+    rgba(255,255,255,.015)
+  );
+  border:1px solid rgba(201,164,92,.22);
+  border-radius:26px;
+  box-shadow:0 28px 70px rgba(0,0,0,.32);
+}
+
+.contacts h2{
+  font-size:clamp(38px,4vw,50px);
+}
+
+.contacts-intro{
+  color:var(--muted);
+  max-width:560px;
+}
+
+.contact-name{
+  margin-top:30px;
+  font-size:22px;
+  font-weight:500;
+}
+
+.contact-role{
+  color:var(--muted);
+}
+
+.contact-phone{
+  margin-top:22px;
+  padding:13px 24px;
+  border:1px solid rgba(201,164,92,.4);
+  border-radius:999px;
+  color:var(--gold-light);
+  font-size:20px;
+  font-weight:500;
+  text-decoration:none;
+  transition:
+    background .2s ease,
+    color .2s ease,
+    transform .2s ease;
+}
+
+.contact-phone:hover{
+  background:var(--gold);
+  color:#111;
+  transform:translateY(-2px);
+}
+
+.contacts address{
+  color:var(--muted);
+}
+
+.contacts address span{
+  display:inline-block;
+  margin-top:4px;
+  color:var(--text);
+}
+
+.social-links{
+  gap:12px;
+  margin-top:34px;
+}
+
+.social-links a{
+  width:50px;
+  height:50px;
+  box-shadow:0 10px 25px rgba(201,164,92,.18);
+}
+
+@media(max-width:680px){
+  .contacts{
+    padding-top:88px;
+    padding-bottom:88px;
+  }
+
+  .contacts-inner{
+    padding:42px 20px;
+    border-radius:20px;
+  }
+
+  .contacts h2{
+    font-size:34px;
+  }
+
+  .contact-phone{
+    font-size:17px;
+    padding:12px 18px;
+  }
+}
