@@ -242,5 +242,17 @@
   </main>
 
   <script src="script.js"></script>
+  <a class="back-to-top" href="#main" aria-label="Вернуться в начало страницы">↑</a>
+
+<script>
+  const backToTop = document.querySelector('.back-to-top');
+
+  function toggleBackToTop() {
+    backToTop.classList.toggle('is-visible', window.scrollY > 700);
+  }
+
+  toggleBackToTop();
+  window.addEventListener('scroll', toggleBackToTop, { passive: true });
+</script>
 </body>
 </html>
