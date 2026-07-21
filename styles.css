@@ -172,7 +172,6 @@ a{color:inherit}
 }
 
 @media(prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
   .hero-button,.social-links a{transition:none}
 }
 /* ===== ANDRAGO TURBO — DARK PREMIUM THEME ===== */
