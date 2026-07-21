@@ -175,3 +175,209 @@ a{color:inherit}
   html{scroll-behavior:auto}
   .hero-button,.social-links a{transition:none}
 }
+/* ===== ANDRAGO TURBO — DARK PREMIUM THEME ===== */
+
+:root{
+  --text:#f3eee6;
+  --muted:#b8b0a4;
+  --gold:#c9a45c;
+  --gold-light:#e2c47f;
+  --bg:#0d0d0f;
+  --surface:#151518;
+  --surface-light:#1b1b1f;
+  --line:rgba(255,255,255,.09);
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+}
+
+.hero-overlay{
+  background:linear-gradient(
+    180deg,
+    rgba(0,0,0,.46) 0%,
+    rgba(0,0,0,.62) 62%,
+    rgba(8,8,10,.92) 100%
+  );
+}
+
+.hero-button{
+  background:var(--gold);
+  color:#111;
+  box-shadow:0 12px 32px rgba(201,164,92,.24);
+}
+
+.hero-button:hover{
+  background:var(--gold-light);
+  transform:translateY(-2px);
+}
+
+.about,
+.services,
+.steps{
+  background:var(--bg);
+}
+
+.achievements,
+.formats,
+.contacts{
+  background:#121216;
+}
+
+.section{
+  border-top:1px solid var(--line);
+}
+
+.section-header h2,
+.about-copy h2,
+.contacts h2,
+.service-item h3,
+.format-copy h3,
+.steps-grid h3,
+.achievement-list h3,
+.achievement-list strong{
+  color:var(--text);
+}
+
+.section-header p,
+.section-subtitle,
+.about-text,
+.achievement-list p,
+.service-item p,
+.format-copy p,
+.steps-grid p,
+.contacts-intro,
+.contact-role,
+.contacts address{
+  color:var(--muted);
+}
+
+.title-line{
+  background:var(--gold);
+}
+
+.about-image{
+  border-radius:22px;
+  box-shadow:0 24px 60px rgba(0,0,0,.35);
+}
+
+.about-copy{
+  padding:46px 42px;
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:22px;
+}
+
+.achievement-list li{
+  padding:22px 24px;
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:16px;
+}
+
+.achievement-number{
+  border-color:var(--gold);
+  color:var(--gold);
+  background:rgba(201,164,92,.08);
+}
+
+.services-grid{
+  gap:28px;
+}
+
+.service-item{
+  padding:38px 26px;
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:18px;
+  transition:transform .25s ease,border-color .25s ease,background .25s ease;
+}
+
+.service-item:hover{
+  transform:translateY(-4px);
+  border-color:rgba(201,164,92,.42);
+  background:var(--surface-light);
+}
+
+.service-icon{
+  stroke:var(--gold);
+}
+
+.format-row{
+  padding:24px;
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:20px;
+}
+
+.format-image{
+  border-radius:14px;
+  background:#222;
+  overflow:hidden;
+}
+
+.steps-grid{
+  gap:28px;
+}
+
+.steps-grid li{
+  padding:36px 26px;
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:18px;
+}
+
+.steps-grid span{
+  border-color:var(--gold);
+  color:var(--gold);
+  background:rgba(201,164,92,.08);
+}
+
+.contact-name,
+.contact-phone{
+  color:var(--text);
+}
+
+.contact-phone{
+  text-decoration-color:var(--gold);
+  text-underline-offset:5px;
+}
+
+.social-links a{
+  background:var(--gold);
+  color:#111;
+}
+
+.social-links a:hover{
+  opacity:1;
+  background:var(--gold-light);
+}
+
+.skip-link{
+  background:var(--gold);
+  color:#111;
+}
+
+:focus-visible{
+  outline-color:var(--gold);
+}
+
+@media(max-width:680px){
+  .about-copy{
+    padding:34px 22px;
+  }
+
+  .achievement-list li{
+    padding:19px 18px;
+  }
+
+  .service-item,
+  .steps-grid li{
+    padding:32px 22px;
+  }
+
+  .format-row{
+    padding:16px;
+  }
+}
