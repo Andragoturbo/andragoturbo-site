@@ -1063,3 +1063,11 @@ body{
     bottom:92px;
   }
 }
+
+/* Andrago Turbo — уточнение первого экрана, ноябрь 2026 */
+.hero-location{display:inline;color:#e2c47f}
+.hero-credentials{max-width:800px;margin:23px auto 0;color:#f3eee6;font-size:clamp(13px,1.1vw,15px);line-height:1.8;font-weight:400}
+.hero-credentials span{color:#c9a45c;margin:0 6px}
+.hero-consultation{margin:19px auto 0;font-size:14px;line-height:1.5;color:#f3eee6}
+.hero-consultation a{color:#e2c47f;text-underline-offset:4px}
+@media(max-width:680px){.hero h1{white-space:normal}.hero-credentials{max-width:360px;line-height:1.65}.hero-content{padding-top:76px;padding-bottom:88px}.hero-kicker{margin-bottom:30px}.hero-text{margin-top:24px}.hero-button{margin-top:28px}}
