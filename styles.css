@@ -1124,3 +1124,29 @@ body{
     margin-top:16px;
   }
 }
+
+/* Complete page update: results, videos, process, pricing and FAQ. */
+.results,.pricing{background:#121216}
+.results-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.results-grid figure,.video-grid figure{min-width:0;margin:0;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--surface)}
+.results-grid img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
+.results-grid figcaption,.video-grid figcaption{padding:18px 20px;color:var(--muted);font-size:15px;line-height:1.5}
+.results-grid .results-team{grid-column:1/-1}
+.results-team img{aspect-ratio:auto;max-height:760px;object-fit:contain;background:#0d0d0f}
+.video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;max-width:760px;margin:auto}
+.video-grid video{display:block;width:100%;aspect-ratio:512/910;object-fit:contain;background:#080808}
+.pricing-copy{text-align:center;color:var(--muted);font-size:17px;line-height:1.6}
+.pricing-copy p{margin:0 auto 22px;max-width:600px}
+.faq details{padding:22px 24px;border:1px solid var(--line);border-radius:16px;background:var(--surface);margin-bottom:14px}
+.faq summary{cursor:pointer;font-size:18px;font-weight:500;color:var(--text)}
+.faq details[open] summary{color:var(--gold-light)}
+.faq details p{margin:16px 0 0;color:var(--muted);line-height:1.65}
+@media(max-width:680px){
+  .results-grid{grid-template-columns:1fr;gap:20px}
+  .results-grid img{aspect-ratio:auto}
+  .video-grid{grid-template-columns:1fr;max-width:360px;gap:24px}
+  .faq details{padding:20px 18px}
+  .faq summary{font-size:17px}
+  .pricing-copy{font-size:16px}
+  .pricing-copy .mid-cta-button{height:auto;min-height:58px;padding:14px 20px}
+}
