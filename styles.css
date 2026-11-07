@@ -1065,9 +1065,62 @@ body{
 }
 
 /* Andrago Turbo — уточнение первого экрана, ноябрь 2026 */
-.hero-location{display:inline;color:#e2c47f}
+
 .hero-credentials{max-width:800px;margin:23px auto 0;color:#f3eee6;font-size:clamp(13px,1.1vw,15px);line-height:1.8;font-weight:400}
 .hero-credentials span{color:#c9a45c;margin:0 6px}
 .hero-consultation{margin:19px auto 0;font-size:14px;line-height:1.5;color:#f3eee6}
 .hero-consultation a{color:#e2c47f;text-underline-offset:4px}
 @media(max-width:680px){.hero h1{white-space:normal}.hero-credentials{max-width:360px;line-height:1.65}.hero-content{padding-top:76px;padding-bottom:88px}.hero-kicker{margin-bottom:30px}.hero-text{margin-top:24px}.hero-button{margin-top:28px}}
+
+/* Hero: the visitor's goals lead the positioning. */
+.hero-content{
+  padding-top:96px;
+}
+.hero h1{
+  max-width:1000px;
+  font-size:clamp(38px,5.2vw,70px);
+  line-height:1.08;
+  white-space:normal;
+  overflow-wrap:break-word;
+}
+.hero h1 > span{
+  display:block;
+}
+.hero-goal-accent{
+  color:var(--gold-light);
+}
+.hero-context{
+  margin:20px auto 0;
+  color:var(--gold-light);
+  font-size:16px;
+  line-height:1.5;
+}
+.hero-text{
+  max-width:680px;
+  margin-top:18px;
+}
+.hero-text strong{
+  color:var(--text);
+  font-weight:500;
+}
+@media(max-width:680px){
+  .hero-content{
+    padding-top:76px;
+  }
+  .hero-kicker{
+    margin-bottom:24px;
+  }
+  .hero h1{
+    font-size:clamp(30px,7.8vw,48px);
+    line-height:1.12;
+    letter-spacing:-.025em;
+  }
+  .hero-context{
+    max-width:310px;
+    margin-top:18px;
+    font-size:14px;
+  }
+  .hero-text{
+    margin-top:16px;
+  }
+}
